@@ -1,0 +1,27 @@
+.listingGrid {
+  a,
+  a:hover {
+    color: #000;
+    text-decoration: none;
+  }
+}
+.sortNav {
+  margin: 10px;
+
+  button {
+    margin-right: 10px;
+    width: 120px;
+  }
+}
+.reCards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 600px) {
+  .sortNav {
+    button {
+      width: 80px;
+    }
+  }
+}

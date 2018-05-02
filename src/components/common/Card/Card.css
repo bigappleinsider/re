@@ -1,0 +1,36 @@
+.reCard {
+  display: flex;
+  flex-direction: row;
+  width: 560px;
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid #ccc; }
+  .reCard .cardDetails {
+    width: 100%;
+    padding-top: 10px;
+    margin-left: 10px; }
+    .reCard .cardDetails .built {
+      text-align: right;
+      font-size: 10px; }
+    .reCard .cardDetails .price {
+      font-size: 46px; }
+    .reCard .cardDetails .fineDetails {
+      display: flex; }
+      .reCard .cardDetails .fineDetails div {
+        padding-right: 5px; }
+  .reCard .address {
+    font-weight: bold;
+    font-size: 24px;
+    color: #007bff; }
+
+@media screen and (max-width: 600px) {
+  .reCard .cardImage img {
+    width: 100px; }
+  .reCard .cardDetails {
+    padding-top: 0px; }
+    .reCard .cardDetails .fineDetails {
+      font-size: 12px; }
+    .reCard .cardDetails .price {
+      font-size: 18px; }
+  .reCard .address {
+    font-size: 14px; } }
