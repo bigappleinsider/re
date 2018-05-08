@@ -1,31 +1,31 @@
 .reCard {
   display: flex;
-  flex-direction: row;
-  width: 560px;
-  padding: 5px;
   margin: 5px;
+  padding: 5px;
   border: 1px solid #ccc;
+  min-width: 236px;
+  width: 560px;
+  cursor: pointer;
+}
 
-  .cardDetails {
-    width: 100%;
-    padding-top: 10px;
-    margin-left: 10px;
+.padded {
+  margin-top: 15px;
+}
 
-    .built {
-      text-align: right;
-      font-size: 10px;
-    }
+.cardDetails {
+  flex: 1;
+  min-width: 0;
+  margin-left: 10px;
 
-    .price {
-      font-size: 46px;
-    }
+  div {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 
-    .fineDetails {
-      display: flex;
-      div {
-        padding-right: 5px;
-      }
-    }
+  .built {
+    text-align: right;
+    font-size: 10px;
   }
 
   .address {
@@ -33,23 +33,34 @@
     font-size: 24px;
     color: #007bff;
   }
+
+  .price {
+    font-size: 46px;
+  }
+
+  .fineDetails {
+    display: flex;
+    div {
+      padding-right: 5px;
+    }
+  }
 }
+
 @media screen and (max-width: 600px) {
   .reCard {
-    .cardImage {
-      img {
-        width: 100px;
-      }
+    width: auto;
+  }
+  .cardImage {
+    img {
+      width: 100px;
     }
-    .cardDetails {
-      padding-top: 0px;
-
-      .fineDetails {
-        font-size: 12px;
-      }
-      .price {
-        font-size: 18px;
-      }
+  }
+  .cardDetails {
+    .fineDetails {
+      font-size: 12px;
+    }
+    .price {
+      font-size: 16px;
     }
     .address {
       font-size: 14px;

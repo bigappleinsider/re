@@ -1,7 +1,7 @@
 export const test = { test: "hello" };
 
 export default {
-  "1806 E. Wayne Lane, Fort Dodge, IA 50501": {
+  "1806 E. Wayne Lane Wayne Lane Wayne Lane Wayne Lane Wayne Lane Wayne Lane, Fort Dodge, IA 50501": {
     cost: "849,950",
     beds: "5",
     baths: "3",

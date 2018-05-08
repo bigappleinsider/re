@@ -1,10 +1,10 @@
 .listingGrid {
-  a,
-  a:hover {
-    color: #000;
-    text-decoration: none;
+  h2 {
+    font-size: 24px;
+    margin-left: 10px;
   }
 }
+
 .sortNav {
   margin: 10px;
 
@@ -13,14 +13,25 @@
     width: 120px;
   }
 }
+
 .reCards {
   display: flex;
   flex-wrap: wrap;
 }
 
 @media screen and (max-width: 600px) {
+  .listingGrid {
+    h2 {
+      font-size: 18px;
+    }
+  }
+  .reCards {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
   .sortNav {
     button {
+      font-size: 80%;
       width: 80px;
     }
   }

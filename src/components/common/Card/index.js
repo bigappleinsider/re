@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-
+import cx from "classnames";
 import "./Card.css";
 
 export const renderPrice = price => {
@@ -8,29 +8,35 @@ export const renderPrice = price => {
   return `$${commaDelimited}`;
 };
 
+const handleCardClick = url => {
+  window.location = url;
+};
+
 const Card = ({ listing }) => {
   return (
-    <a href={listing.url}>
-      <div className="reCard">
-        <div className="cardImage">
-          <img src={listing.thumb} alt={listing.address1} />
-        </div>
+    <div className="reCard" onClick={() => handleCardClick(listing.url)}>
+      <div className="cardImage">
+        <img src={listing.thumb} alt={listing.address1} />
+      </div>
 
-        <div className="cardDetails">
-          {listing.built && (
-            <div className="built">{"Built in " + listing.built}</div>
-          )}
-          <div className="address">{listing.address1}</div>
-          <div className="address">{listing.address2}</div>
+      <div className={cx("cardDetails", listing.built ? "" : "padded")}>
+        {listing.built && (
+          <div className="built">{"Built in " + listing.built}</div>
+        )}
+        {listing.address1 && <div className="address">{listing.address1}</div>}
+        {listing.address2 && <div className="address">{listing.address2}</div>}
+
+        {listing.price && (
           <div className="price">{renderPrice(listing.price)}</div>
-          <div className="fineDetails">
-            {listing.beds && <div>{listing.beds} beds</div>}
-            {listing.baths && <div> &bull; {listing.baths} baths</div>}
-            {listing.sqft && <div> &bull; {listing.sqft} sq ft</div>}
-          </div>
+        )}
+
+        <div className="fineDetails">
+          {listing.beds && <div>{listing.beds} beds</div>}
+          {listing.baths && <div> &bull; {listing.baths} baths</div>}
+          {listing.sqft && <div> &bull; {listing.sqft} sq ft</div>}
         </div>
       </div>
-    </a>
+    </div>
   );
 };
 
